@@ -1,12 +1,13 @@
-package com.saiyans.gor
+package com.saiyans.gor.ui 
 
 import androidx.lifecycle.*
+import com.saiyans.gor.db.ProxyServer 
+import com.saiyans.gor.db.ProxyServerDao
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
-// ViewModel para MainActivity
 class MainViewModel(private val dao: ProxyServerDao) : ViewModel() {
-
+    // ... (contenido idéntico al anterior) ...
     val allServers: Flow<List<ProxyServer>> = dao.getAllServers()
 
     fun addServer(server: ProxyServer) {
@@ -22,7 +23,7 @@ class MainViewModel(private val dao: ProxyServerDao) : ViewModel() {
     }
 }
 
-// Factory para poder pasar el DAO al crear el ViewModel
+// Factory (puede estar aquí o en archivo separado)
 class MainViewModelFactory(private val dao: ProxyServerDao) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(MainViewModel::class.java)) {

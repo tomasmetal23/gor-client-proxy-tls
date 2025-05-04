@@ -1,4 +1,4 @@
-package com.example.gor_client_proxy_tls // <<< AJUSTA TU PACKAGE
+package com.saiyans.gor
 
 import android.annotation.SuppressLint
 import android.graphics.Color
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gor_client_proxy_tls.databinding.ItemProxyServerBinding // <<< USA VIEW BINDING
+import com.example.gor_client_proxy_tls.databinding.ItemProxyServerBinding 
 
 // Constante definida en MainActivity.kt, puedes moverla a un archivo común
 // const val INVALID_SERVER_ID = -1
